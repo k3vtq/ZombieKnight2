@@ -1,5 +1,6 @@
 import pygame
 
+
 class Tile(pygame.sprite.Sprite):
     """A class to represent a 32x32 pixel area in our display"""
 

@@ -46,5 +46,4 @@ class RubyMaker(pygame.sprite.Sprite):
             self.current_sprite += speed
         else:
             self.current_sprite = 0
-
         self.image = sprite_list[int(self.current_sprite)]
