@@ -100,7 +100,7 @@ class Ruby(pygame.sprite.Sprite):
 
     def animate(self, sprite_list, speed):
         """Animate the ruby"""
-        if self.current_sprite < len(sprite_list):
+        if self.current_sprite < len(sprite_list) - 1:
             self.current_sprite += speed
         else:
             self.current_sprite = 0

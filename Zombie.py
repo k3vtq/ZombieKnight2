@@ -9,7 +9,7 @@ class Zombie(pygame.sprite.Sprite):
 
     def __init__(self, platform_group, portal_group, min_speed, max_speed, window_width, window_height, fps):
         """Initialize the zombie"""
-        super.__init__()
+        super().__init__()
 
         # Set constant variables
         self.VERTICAL_ACCELERATION = 3
@@ -297,10 +297,10 @@ class Zombie(pygame.sprite.Sprite):
             if self.animate_death:
                 self.current_sprite = len(sprite_list) - 1
                 self.animate_death = False
-                if self.animate_rise:
-                    self.animate_rise = False
-                    self.is_dead = False
-                    self.frame_count = 0
-                    self.round_time = 0
+            if self.animate_rise:
+                self.animate_rise = False
+                self.is_dead = False
+                self.frame_count = 0
+                self.round_time = 0
 
         self.image = sprite_list[int(self.current_sprite)]

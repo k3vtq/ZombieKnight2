@@ -31,7 +31,6 @@ class Game:
     def __init__(self):
         """Initialize the game"""
         # Set constant variables
-        self.main_tile_group = None
         self.running = True
         self.STARTING_ROUND_TIME = 30
         self.STARTING_ZOMBIE_CREATION_TIME = 5
@@ -386,8 +385,5 @@ class Game:
         self.zombie_group.empty()
         self.ruby_group.empty()
         self.bullet_group.empty()
-
-        #TODO: call .empty() on the following sprite groups
-        # zombie_group, ruby_group, bullet_group
 
         pygame.mixer.music.play(-1, 0.0)

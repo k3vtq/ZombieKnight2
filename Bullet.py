@@ -13,7 +13,7 @@ class Bullet(pygame.sprite.Sprite):
 
         # Load image and get rect
         if player.velocity.x > 0:
-            self.image = pygame.transform.scale(pygame.image.load("./assets/images/player/slash.png"))
+            self.image = pygame.transform.scale(pygame.image.load("./assets/images/player/slash.png"), (32, 32))
         else:
             # almost the same as in the if part.
             self.image = pygame.transform.scale(

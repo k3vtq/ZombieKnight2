@@ -259,8 +259,8 @@ class Player(pygame.sprite.Sprite):
 
     def jump(self):
         """Jump upwards if on a platform"""
-        #Only jump if on a platform
-        if pygame.sprite.spritecollide(self, self.platform_group, False) == True:
+        # Only jump if on a platform
+        if pygame.sprite.spritecollide(self, self.platform_group, False):
             self.jump_sound.play()
             self.velocity.y = -1 * self.VERTICAL_JUMP_SPEED
             self.animate_jump = True
@@ -283,8 +283,8 @@ class Player(pygame.sprite.Sprite):
             self.current_sprite += speed
         else:
             self.current_sprite = 0
-            if self.animate_jump == True:
+            if self.animate_jump:
                 self.animate_jump = False
-            if self.animate_fire == True:
+            if self.animate_fire:
                 self.animate_fire = False
-            self.image = sprite_list[int(self.current_sprite)]
+        self.image = sprite_list[int(self.current_sprite)]
